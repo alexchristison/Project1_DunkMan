@@ -127,3 +127,4 @@ Both of these images were used in actual user testing:
 ![IMG_9651](https://media.git.generalassemb.ly/user/48482/files/47a76c3a-c202-40c2-bee6-0f3ad48f62a3)
 
 The value of user testing was significant as it lead to the conclusion that building Dunk Man with correct guesses would require no more than seven (or nine) correctly guessed letters. Doing so would result in a poor user experience if a word to be guessed had eight/ten or more different lettters (depending if pole/hoop were hard-coded into game) # Project1_DunkMan
+# Project1_DunkMan
