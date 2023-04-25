@@ -4,20 +4,26 @@
 
 
 // random array of six letter words
-// const items = ["orange", "apples", "poster", "burger", "pizzas", "litmus", "locker", "soccer", "bishop", "casual", "castle", "snazzy", "ornery", "walrus", "poncho", "velvet"];
+const items = ["orange", "apples", "poster", "burger", "pizzas", "litmus", "locker", "soccer", "bishop", "casual", "castle", "snazzy", "ornery", "walrus", "poncho", "velvet"];
 
 // const correctLetter = [];
 // const wrongLetter = [];
 // const underScore = [];
 
-// console.log(dunk_6letter_words(items));
+console.log(dunk_6letter_words(items));
+
+function dunk_6letter_words(items){
+return items[Math.floor(Math.random()*items.length)]; 
+}
+
 
 /*--------App's state (variables)----------*/
-// let randomWord = [items];
+let randomWord = '';
+let buttonValue = '';
+let wrongLetter = '';
 // console.log(randomWord)
 // let correctLetter = '';
-// let wrongLetter = '';
-// let inputSelection = '';
+let inputSelection = '';
 
 /*------------Cashed elements------------*/
 const letterButtonsEl = document.querySelector('#letters');
@@ -30,19 +36,41 @@ const letterButtonsEl = document.querySelector('#letters');
 // this works for testing button!!! 
 letterButtonsEl.addEventListener('click', function(event) {
     const buttonValue = event.target.textContent;
-  
+
     console.log('Button clicked:', buttonValue);
 });
-
+// ------------------------------------
+// letterButtonsEl.addEventListener('click', function(event) {
+//     const buttonValue = event.target.textContent;
+  
+// let stringArray = inputSelection.split('')
+// if (randomWord.includes(buttonValue)) {
+//     for(let i = 0; i < randomWord; i++) {
+//         if(randomWord[i] === buttonValue) {
+//             stringArray[i] = buttonValue 
+//         } 
+//     }
+// }
+// else {
+//     console.log('wrong letter')
+// }
+//     console.log('Button clicked:', buttonValue);
+// });
+// ------------------------------------
 
 // const docUnderScore = document.getElementsByClassName(underScore);
 // const docCorrectLetter = document.getElementsByClassName(correctLetter);
 // const docWrongLettter = document.getElementsByClassName(wrongLetter);
 
 /*-----------Functions-----------------*/
+
 // the function here is to randomly choose a word from the dunk 6 letter word array
-// function dunk_6letter_words(items)
-// {
+// --------------------------
+// function dunk_6letter_words(items) {
+//     randomWord = items[Math.floor(Math.random()*items.length)];
+//     return randomWord
+// }
+
 // let currentWord = items[Math.floor(Math.random()*items.length)]; 
 // console.log(currentWord)
 // return currentWord
@@ -54,13 +82,13 @@ letterButtonsEl.addEventListener('click', function(event) {
 // const array = [items];
 
 // HARD CODED TEST FOR WORD / LETTER CHECK  up to 7 down.------>
-let currentWord = 'chopped'
-console.log(currentWord.includes.buttonValue);
-if (currentWord.includes('d') === true) {
-    console.log(true)
-} else {
-    console.log(false)
-}
+// let currentWord = 'chopped'
+// console.log(currentWord.includes.buttonValue);
+// if (currentWord.includes('d') === true) {
+//     console.log(true)
+// } else {
+//     console.log(false)
+// }
 
 // function to see if the letter the user inputs is in the word
 
