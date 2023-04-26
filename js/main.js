@@ -10,20 +10,42 @@ const items = ["orange", "apples", "poster", "burger", "pizzas", "litmus", "lock
 // const wrongLetter = [];
 // const underScore = [];
 
-console.log(dunk_6letter_words(items));
+console.log(dunk6LetterWords(items));
 
-function dunk_6letter_words(items){
+function dunk6LetterWords(items){
 return items[Math.floor(Math.random()*items.length)]; 
 }
 
 
+// STEPS OF THE GAME (assuming a random SIX letter word has been generated, ie: randomWord)
+// 1) display dashes (or underscores) representing each letter of randomWord (in our case it will be six)
+// 2) user clicks on any letter
+// 3) check to see if that letter is in the randomWord
+// 4) block out that letter from being chosen again (bad user experience to skip, but is it needed for MVP?)
+// 5) if the letter is in the randomWord's display of dashes/underscores show anywhere the letter is located in the randomWord (letter can obviously appear multiple times in a word)
+// 6) if the letter is not in the randomWord count -1 point agaist user AND display part of an image of the DunkMan (2 legs, body, 2 arms, head, bball) (***for mvp-MVP can be it be a "wrong" counter??)
+// 7) tally the -1 points against player
+// 8) check and see if all letters in randomWord have been guessed correctly
+// 9) check and see if user has made 7 incorrect guesses, ie: do they have -7 points (these represent 2 legs, body, 2 arms, head, bball)
+// 10) if step 8 is true = user wins (display "winner" message)
+// 11) if step 9 is true = user loses (display "loser" message)
+// 12) if step 8 and 9 are false user clicks on any letter that has not already been clicked
+// 13) repeat steps 2-11
+
+
 /*--------App's state (variables)----------*/
-let randomWord = '';
-let buttonValue = '';
-let wrongLetter = '';
-// console.log(randomWord)
-// let correctLetter = '';
-let inputSelection = '';
+ // randomWord - array of letters from randomWord
+ const randomWord = '';
+ // guessedLetters - (sring or array)
+ const guessedLetters = [];
+ // numberGuesses - int (guessed lettter lenght || incremented separately)
+ const numberOfGuesses = guessedLetters.length;
+ // wrongGuesses - array 
+ // const wrongGuesses = [];
+ // correctLetterGuesses - array 
+ // const correctLetterGuesses = []; 
+ // game over - boolean
+ let gameOver = false; 
 
 /*------------Cashed elements------------*/
 const letterButtonsEl = document.querySelector('#letters');
