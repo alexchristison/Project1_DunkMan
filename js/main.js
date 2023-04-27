@@ -16,7 +16,7 @@
 
 
 // random array of six letter words
-const items = ["orange", "apples", "poster", "burger", "pizzas", "litmus", "locker", "soccer", "bishop", "casual", "castle", "snazzy", "ornery", "walrus", "poncho", "velvet"];
+const items = ["albeit", "bedpan", "chalet", "dancer", "emails", "family", "galore", "haikus", "impugn", "jacked", "kibosh", "litmus", "magpie", "nachos", "ornery", "pacify", "quiver", "remand", "sacred", "thumbs", "uncles", "vowing", "walrus", "xyloid", "yanked", "zinger"];
 
 // const correctLetter = [];
 // const wrongLetter = [];
@@ -32,11 +32,11 @@ function dunk6LetterWords(items){
 // in this line we call the word from the array of 'items'
 dunk6LetterWords(items)
 
-// STEPS OF THE GAME (assuming a random SIX letter word has been generated, ie: randomWord)
-// 1) display dashes (or underscores) representing each letter of randomWord (in our case it will be six)
-// 2) user clicks on any letter // this function checks the guessed letter (checkGuess) to see if it is in randomWord
-// 3) check to see if that letter is in the randomWord
-// 4) block out that letter from being chosen again (bad user experience to skip, but is it needed for MVP?)
+// STEPS OF THE GAME (assuming a random SIX letter word has been generated, ie: randomWord) ✅
+// 1) display dashes (or underscores) representing each letter of randomWord (in our case it will be six) ✅
+// 2) user clicks on any letter // this function checks the guessed letter (checkGuess) to see if it is in randomWord ✅
+// 3) check to see if that letter is in the randomWord ✅
+// 4) block out that letter from being chosen again (bad user experience to skip, but is it needed for MVP?) 
 // 5) if the letter is in the randomWord's display of dashes/underscores show anywhere the letter is located in the randomWord (letter can obviously appear multiple times in a word)
 // 6) if the letter is not in the randomWord count -1 point agaist user AND display part of an image of the DunkMan (2 legs, body, 2 arms, head, bball) (***for mvp-MVP can be it be a "wrong" counter??)
 // 7) tally the -1 points against player
@@ -65,6 +65,22 @@ const checkGuess = (letter) => {
     else if (!randomWord.includes(letter.toLowerCase())) {
         wrongGuesses.push(letter)
         console.log("an incorrect guess", wrongGuesses)
+    }
+    // if (wrongGuesses === 7) {
+    //     console.log("game over");
+    // }
+    // if (correctGuesses === 6) {
+    //     console.log("you won")
+    // }
+    checkWin()
+}
+
+function checkWin() {
+    if (wrongGuesses.length === 7) {
+        console.log("game over");
+    }
+    if (correctGuesses.length === 6) {
+        console.log("you won")
     }
 }
 
@@ -101,6 +117,7 @@ letterButtonsEl.addEventListener('click', function(event) {
 
     console.log('Button clicked:', buttonValue);
     checkGuess(buttonValue)
+    // checkWin()
 });
 // ------------------------------------
 // letterButtonsEl.addEventListener('click', function(event) {
