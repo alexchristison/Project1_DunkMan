@@ -1,6 +1,18 @@
 
 /*------------Constants----------*/
-
+/*--------App's state (variables)----------*/
+ // randomWord - array of letters from randomWord
+ let randomWord = '';
+ // guessedLetters - (sring or array)
+ const guessedLetters = [];
+ // numberGuesses - int (guessed lettter lenght || incremented separately)
+ const numberOfGuesses = guessedLetters.length;
+ // wrongLetterGuesses - array 
+ const wrongGuesses = [];
+ // correctLetterGuesses - array 
+ const correctGuesses = []; 
+ // game over - boolean
+ let gameOver = false;
 
 
 // random array of six letter words
@@ -9,17 +21,20 @@ const items = ["orange", "apples", "poster", "burger", "pizzas", "litmus", "lock
 // const correctLetter = [];
 // const wrongLetter = [];
 // const underScore = [];
-
-console.log(dunk6LetterWords(items));
+// we commented out this console.log which had been generating the word from array of items (new console.log below)
+// console.log(dunk6LetterWords(items));
 
 function dunk6LetterWords(items){
-return items[Math.floor(Math.random()*items.length)]; 
+    randomWord = items[Math.floor(Math.random()*items.length)]; 
+    // here we console.log the randomWord from the array 'items'
+    console.log(randomWord)
 }
-
+// in this line we call the word from the array of 'items'
+dunk6LetterWords(items)
 
 // STEPS OF THE GAME (assuming a random SIX letter word has been generated, ie: randomWord)
 // 1) display dashes (or underscores) representing each letter of randomWord (in our case it will be six)
-// 2) user clicks on any letter
+// 2) user clicks on any letter // this function checks the guessed letter (checkGuess) to see if it is in randomWord
 // 3) check to see if that letter is in the randomWord
 // 4) block out that letter from being chosen again (bad user experience to skip, but is it needed for MVP?)
 // 5) if the letter is in the randomWord's display of dashes/underscores show anywhere the letter is located in the randomWord (letter can obviously appear multiple times in a word)
@@ -33,19 +48,44 @@ return items[Math.floor(Math.random()*items.length)];
 // 13) repeat steps 2-11
 
 
-/*--------App's state (variables)----------*/
- // randomWord - array of letters from randomWord
- const randomWord = '';
- // guessedLetters - (sring or array)
- const guessedLetters = [];
- // numberGuesses - int (guessed lettter lenght || incremented separately)
- const numberOfGuesses = guessedLetters.length;
- // wrongGuesses - array 
- // const wrongGuesses = [];
- // correctLetterGuesses - array 
- // const correctLetterGuesses = []; 
- // game over - boolean
- let gameOver = false; 
+ 
+// this function checks the guessed letter (checkGuess) to see if it is in randomWord
+const checkGuess = (letter) => {
+    // this specifically logs the random word
+    console.log("Random Word inside checked guess", randomWord)
+    // this specifically logs the letter
+    console.log("the letter to check in CG", letter)
+    // this specifically checks to see if the checkedGuess letter is in the randomWord (and makes specifically the letter to lower case)
+    console.log("letter included?", randomWord.includes(letter.toLowerCase()))
+    // to push a true (correct) guess into correctGuesses array
+    if (randomWord.includes(letter.toLowerCase())) {
+        correctGuesses.push(letter) 
+        console.log("a correct guess", correctGuesses)
+    }
+    else if (!randomWord.includes(letter.toLowerCase())) {
+        wrongGuesses.push(letter)
+        console.log("an incorrect guess", wrongGuesses)
+    }
+}
+
+//  checkGuess
+
+
+
+// function checkGuess(randomWord.includes(letter.toLowerCase())) {
+//     if (checkGuess = false)
+//     wrongGuesses.push(checkGuess);
+//     console.log("wrong guess," wrongGuesses);
+// } else {
+//     correctGuesses.push(checkGuess);
+//     console.log("correct guess" correctGuesses)
+// }
+
+// }
+
+
+//     push ... 
+// }
 
 /*------------Cashed elements------------*/
 const letterButtonsEl = document.querySelector('#letters');
@@ -60,6 +100,7 @@ letterButtonsEl.addEventListener('click', function(event) {
     const buttonValue = event.target.textContent;
 
     console.log('Button clicked:', buttonValue);
+    checkGuess(buttonValue)
 });
 // ------------------------------------
 // letterButtonsEl.addEventListener('click', function(event) {
