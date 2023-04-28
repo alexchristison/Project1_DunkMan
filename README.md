@@ -19,7 +19,11 @@
 - HTML, JS (CS to come)
 
 ## Getting started: 
-A link to the game can be found here. As illustrated in the images section, since the game is not fully functional on the front-end the user can view the functions of the game in the inspect feature of their Chrome browser and view the console. The user can then proceed to view the randomly generated word in the console, and click on letters that render in the webpage to confirm they are in the word. The user will be able to see that letters that are in the word will be added to an array, and that letters that are not in the word will be added to another array. Upon clicking all the letters in the word the user will see in the console that the game was won. Conversely, as they click on incorrect letters that are not in the word they can see that those letters are added to that corresponding array and once it reaches seven incorrect guesses the game is lost. 
+A link to the game can be found here. 
+
+https://alexchristison.github.io/Project1_DunkMan/
+
+As illustrated in the images section, since the game is not fully functional on the front-end the user can view the functions of the game in the inspect feature of their Chrome browser and view the console. The user can then proceed to view the randomly generated word in the console, and click on letters that render in the webpage to confirm they are in the word. The user will be able to see that letters that are in the word will be added to an array, and that letters that are not in the word will be added to another array. Upon clicking all the letters in the word the user will see in the console that the game was won. Conversely, as they click on incorrect letters that are not in the word they can see that those letters are added to that corresponding array and once it reaches seven incorrect guesses the game is lost. 
 
 ## Next Steps: 
 - to reach MVP for this game the following will be added: 
