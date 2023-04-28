@@ -6,6 +6,6 @@
 
 ## Images of Game: 
 
-![Game Image #1]https://i.imgur.com/Dp5nm2m.png
+![Game Image #1] https://i.imgur.com/Dp5nm2m.png
 
 ![Game Image #2] 
