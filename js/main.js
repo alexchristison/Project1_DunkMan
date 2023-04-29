@@ -126,7 +126,7 @@ letterButtonsEl.addEventListener('click', function(event) {
     checkGuess(buttonValue)
     // checkWin()
 });
-// ------------------------------------
+// -------------------------------------
 // letterButtonsEl.addEventListener('click', function(event) {
 //     const buttonValue = event.target.textContent;
   
