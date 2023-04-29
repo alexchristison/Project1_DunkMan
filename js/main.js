@@ -78,11 +78,18 @@ const checkGuess = (letter) => {
 function checkWin() {
     if (wrongGuesses.length === 7) {
         console.log("game over");
+        document.querySelector("h1").textContent = "Game Over"
     }
     if (correctGuesses.length === 6) {
-        console.log("you won")
+        console.log("you won");
+        document.querySelector("h1").textContent = "You Win"
     }
 }
+
+const restartBtn = document.querySelector('.restart');
+restartBtn.addEventListener('click', () => {
+  location.reload();
+});
 
 //  checkGuess
 
