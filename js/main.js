@@ -78,11 +78,11 @@ const checkGuess = (letter) => {
 function checkWin() {
     if (wrongGuesses.length === 7) {
         console.log("game over");
-        document.querySelector("h1").textContent = "Game Over"
+        document.querySelector("h2").textContent = "GAME OVER!!!!!"
     }
     if (correctGuesses.length === 6) {
         console.log("you won");
-        document.querySelector("h1").textContent = "You Win"
+        document.querySelector("h2").textContent = "YOU WIN!!!!!"
     }
 }
 
