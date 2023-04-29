@@ -91,7 +91,7 @@ restartBtn.addEventListener('click', () => {
   location.reload();
 });
 
-//  checkGuess
+//  checkGuessss
 
 
 
